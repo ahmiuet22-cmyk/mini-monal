@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import SEOHead from './components/SEOHead';
 import ReservationModal from './components/ReservationModal';
 import OrderDrawer from './components/OrderDrawer';
+import WelcomeLoader from './components/WelcomeLoader';
 import HomePage from './pages/HomePage';
 import MenuPage from './pages/MenuPage';
 import AboutPage from './pages/AboutPage';
@@ -14,6 +15,7 @@ import { RESTAURANT_INFO } from './data/menuData';
 import { useScrollReveal } from './hooks/useScrollReveal';
 
 export default function App() {
+  const [showLoader, setShowLoader] = useState(true);
   const [activePage, setActivePage] = useState('home');
   const [reservationOpen, setReservationOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
@@ -82,6 +84,9 @@ export default function App() {
 
   return (
     <div className="app-root">
+      {/* Royal Welcome Splash Loader Screen */}
+      {showLoader && <WelcomeLoader onFinished={() => setShowLoader(false)} />}
+
       {/* Dynamic SEO Meta & Schema */}
       <SEOHead activePage={activePage} />
 
