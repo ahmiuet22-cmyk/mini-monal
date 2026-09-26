@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { 
-  Crown, 
-  MapPin, 
-  Phone, 
-  ChevronRight, 
-  Star, 
-  Utensils, 
-  Car, 
-  Truck, 
-  Flame, 
-  Sparkles, 
-  Award, 
-  Users, 
-  ShieldCheck, 
-  Clock, 
+import {
+  Crown,
+  MapPin,
+  Phone,
+  ChevronRight,
+  Star,
+  Utensils,
+  Car,
+  Truck,
+  Flame,
+  Sparkles,
+  Award,
+  Users,
+  ShieldCheck,
+  Clock,
   ArrowRight,
   ChevronLeft,
   Quote,
@@ -78,11 +78,11 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
       <section className="hero-split-section">
         <div className="container">
           <div className="hero-split-grid">
-            
+
             {/* Left Column: Brand, Tagline, Story, Actions */}
             <div className="hero-left-col animate-fade-up">
               <div className="hero-badge-clean">
-                <Crown size={16} color="var(--gold-primary)" />
+                <Crown size={15} color="var(--gold-primary)" />
                 <span>PREMIUM FAMILY DINING • GUJRANWALA</span>
               </div>
 
@@ -101,17 +101,17 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
 
               {/* Action Buttons */}
               <div className="hero-split-cta">
-                <button 
-                  className="btn-primary" 
+                <button
+                  className="btn-primary"
                   onClick={() => setActivePage('menu')}
                   style={{ padding: '0.9rem 2.1rem', fontSize: '1rem' }}
                 >
                   <Utensils size={17} /> Explore Menu
                 </button>
 
-                <a 
-                  href={RESTAURANT_INFO.googleMapsUrl} 
-                  target="_blank" 
+                <a
+                  href={RESTAURANT_INFO.googleMapsUrl}
+                  target="_blank"
                   rel="noreferrer"
                   className="btn-secondary"
                   style={{ padding: '0.9rem 1.9rem', fontSize: '1rem' }}
@@ -122,8 +122,8 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
 
               {/* Quick Trust / Phone Strip */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', flexWrap: 'wrap', paddingTop: '1rem', borderTop: '1px solid var(--border-subtle)' }}>
-                <a 
-                  href={`tel:${RESTAURANT_INFO.phoneRaw}`} 
+                <a
+                  href={`tel:${RESTAURANT_INFO.phoneRaw}`}
                   style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', color: 'var(--gold-light)', fontWeight: 700, fontSize: '0.95rem' }}
                 >
                   <Phone size={15} color="var(--gold-primary)" /> {RESTAURANT_INFO.phone}
@@ -138,9 +138,9 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
             {/* Right Column: Prominent Storefront / Chef Photography */}
             <div className="hero-right-col animate-fade-up" style={{ animationDelay: '0.2s' }}>
               <div className="hero-image-card">
-                <img 
-                  src="/images/storefront.jpg" 
-                  alt="Mini Monal Restaurant Storefront on GT Road Gujranwala" 
+                <img
+                  src="/images/storefront.jpg"
+                  alt="Mini Monal Restaurant Storefront on GT Road Gujranwala"
                 />
 
                 {/* Floating Top Badge */}
@@ -159,7 +159,7 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
                     </div>
                   </div>
 
-                  <button 
+                  <button
                     onClick={openReservation}
                     className="btn-outline-gold"
                     style={{ padding: '0.35rem 0.85rem', fontSize: '0.78rem' }}
@@ -238,9 +238,9 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
         <div className="container">
           <div className="split-experience">
             <div className="exp-image-wrap reveal-left">
-              <img 
-                src="/images/karahi.jpg" 
-                alt="Sizzling Mutton Karahi at Mini Monal" 
+              <img
+                src="/images/karahi.jpg"
+                alt="Sizzling Mutton Karahi at Mini Monal"
               />
               <div className="exp-badge-float floating-elem">
                 <Flame color="var(--gold-primary)" size={24} />
@@ -267,14 +267,14 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
               </p>
 
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                <button 
-                  className="btn-primary" 
+                <button
+                  className="btn-primary"
                   onClick={() => setActivePage('menu')}
                 >
                   Discover Our Menu <ArrowRight size={16} />
                 </button>
-                <button 
-                  className="btn-secondary" 
+                <button
+                  className="btn-secondary"
                   onClick={openReservation}
                 >
                   Reserve a Family Table
@@ -302,8 +302,8 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
 
           <div className="category-grid">
             {popularCategories.map((cat, index) => (
-              <div 
-                key={cat.id} 
+              <div
+                key={cat.id}
                 className={`category-card card-hover-lift reveal-up delay-${((index % 4) + 1) * 100}`}
                 onClick={() => setActivePage('menu')}
               >
@@ -368,7 +368,7 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
                         )}
                       </div>
 
-                      <button 
+                      <button
                         className="btn-outline-gold"
                         style={{ padding: '0.45rem 0.95rem' }}
                         onClick={() => {
@@ -438,8 +438,8 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
                 </div>
               </div>
 
-              <button 
-                className="btn-primary" 
+              <button
+                className="btn-primary"
                 style={{ width: '100%', justifyContent: 'center' }}
                 onClick={() => {
                   addToCart({
@@ -477,8 +477,8 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
                 </div>
               </div>
 
-              <button 
-                className="btn-primary" 
+              <button
+                className="btn-primary"
                 style={{ width: '100%', justifyContent: 'center' }}
                 onClick={() => {
                   addToCart({
@@ -516,8 +516,8 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
                 </div>
               </div>
 
-              <button 
-                className="btn-primary" 
+              <button
+                className="btn-primary"
                 style={{ width: '100%', justifyContent: 'center' }}
                 onClick={() => {
                   addToCart({
@@ -585,7 +585,7 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
                         <div className="dish-price-val" style={{ fontSize: '1rem' }}>{dish.priceText}</div>
                       )}
                     </div>
-                    <button 
+                    <button
                       className="btn-outline-gold"
                       onClick={() => {
                         addToCart({
@@ -606,8 +606,8 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
           </div>
 
           <div style={{ textAlign: 'center' }}>
-            <button 
-              className="btn-primary" 
+            <button
+              className="btn-primary"
               onClick={() => setActivePage('menu')}
               style={{ padding: '0.95rem 2.5rem', fontSize: '1.05rem' }}
             >
@@ -723,9 +723,9 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
             </div>
 
             <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
-              <a 
-                href={RESTAURANT_INFO.googleMapsUrl} 
-                target="_blank" 
+              <a
+                href={RESTAURANT_INFO.googleMapsUrl}
+                target="_blank"
                 rel="noreferrer"
                 className="btn-outline-gold"
               >
@@ -761,7 +761,7 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '1.25rem', flexWrap: 'wrap' }}>
-              <a 
+              <a
                 href={RESTAURANT_INFO.googleMapsUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -771,7 +771,7 @@ export default function HomePage({ setActivePage, openReservation, addToCart }) 
                 <MapPin size={17} /> Get Directions
               </a>
 
-              <a 
+              <a
                 href={`tel:${RESTAURANT_INFO.phoneRaw}`}
                 className="btn-secondary"
                 style={{ padding: '0.9rem 2.2rem' }}

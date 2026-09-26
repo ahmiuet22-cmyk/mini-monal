@@ -500,7 +500,7 @@ img {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 8rem 0 4rem;
+  padding: 9.5rem 0 4.5rem;
   background: radial-gradient(circle at 80% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
               radial-gradient(circle at 10% 80%, rgba(180, 83, 9, 0.05) 0%, transparent 50%),
               #090a0d;
@@ -1375,10 +1375,17 @@ img {
     letter-spacing: 0.16em;
   }
 
-  /* Compact Hero on Mobile */
+  /* Compact Hero on Mobile with generous top clearance for fixed header */
   .hero-split-section {
-    padding: 6.5rem 0 2rem;
+    padding: 9.8rem 0 2.5rem;
     min-height: auto;
+  }
+
+  .menu-page-wrapper,
+  .about-page-wrapper,
+  .gallery-page-wrapper,
+  .contact-page-wrapper {
+    padding-top: 8.5rem !important;
   }
 
   .hero-left-col {

@@ -49,30 +49,24 @@ export default function Navbar({ activePage, setActivePage, openReservation, car
         {/* Top micro announcement bar */}
         {!isScrolled && (
           <div className="top-announcement-bar">
-            <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', color: '#2ecc71', fontWeight: 700, fontSize: '0.78rem' }}>
-                  <span className="live-dot" style={{ background: '#2ecc71', boxShadow: '0 0 8px #2ecc71' }}></span>
-                  <span>OPEN NOW</span>
-                </span>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', color: 'var(--gold-light)' }}>
-                  <Clock size={13} /> {RESTAURANT_INFO.hours}
-                </span>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }} className="hide-mobile">
-                  <MapPin size={13} /> {RESTAURANT_INFO.shortAddress}
-                </span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+            <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.5rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', width: '100%', justifyContent: 'space-between' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#2ecc71', fontWeight: 700, fontSize: '0.75rem' }}>
+                    <span className="live-dot"></span>
+                    <span>OPEN NOW</span>
+                  </span>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', color: 'var(--gold-light)', fontSize: '0.75rem' }}>
+                    <Clock size={12} /> Till 2:00 AM
+                  </span>
+                </div>
+
                 <a 
                   href={`tel:${RESTAURANT_INFO.phoneRaw}`} 
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', color: 'var(--gold-light)', fontWeight: 600 }}
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', color: 'var(--gold-light)', fontWeight: 600, fontSize: '0.75rem' }}
                 >
-                  <Phone size={13} /> Call {RESTAURANT_INFO.phone}
+                  <Phone size={12} /> {RESTAURANT_INFO.phone}
                 </a>
-                <span style={{ color: 'var(--border-subtle)' }} className="hide-mobile">|</span>
-                <span style={{ color: '#ffb703', fontWeight: 700 }} className="hide-mobile">
-                  ★ 4.1 Rating (304 Google Reviews)
-                </span>
               </div>
             </div>
           </div>
